@@ -1,0 +1,32 @@
+00200493 // t0 = 2 00
+00000093 // i = 0 04 
+01400413 // z = 20 08
+// loop:
+04808c63 // while x1 != 20, else go done 0C
+00008193 // r1 = i  10
+01408213 // r2 = i + 20  14
+02800293 // r3 = 40 18
+00108093 // i = i + 1  1C
+00000113 // j = 0 20
+// innerloop1:
+00910c63 // while x2 != 2, else go innerexit1 24
+003181b3 // r1 = r1 + r1 28
+00420233 // r2 = r2 + r2 2C
+005282b3 // r3 = r3 + r3 30
+00110113 // j = j + 1  34
+fe0006e3 // goto innerloop1 38
+// innerexit1:
+00022303 // dist = mem[r2] 3C
+00000113 // j = 0 40
+// innerloop2:
+00910863 // while x2 != 2, else go innerexit2 44
+00630333 // dist = dist + dist 48
+00110113 // j = j + 1 4C
+fe000ae3 // goto innerloop2 50
+// innerexit2:
+006282b3 // r3 = r3 + disk 54
+0001a383 // t1 = mem[r1] 58
+0072a023 // mem[r3] = t1 5C
+fa0006e3 // goto loop 60
+// done:
+00002023 // x0 = 0 -- END SIMULATION - NOOP -- 64
