@@ -6,5 +6,5 @@ Also there are two binary code snippets I wrote to simulate
 using gtkwave.
 
 This repo also contains the work I done for Low Level Programming:
-- 16 bit x86 assembly in DOSBOX environment
-- 64 bit x86 assembly separately compiled and called from cpp executables
+- 16 bit x86 assembly written in DOSBOX environment.
+- 64 bit x86 assembly files that are separately compiled and called from cpp executables.
